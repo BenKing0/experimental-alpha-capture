@@ -31,7 +31,6 @@ class FeedLoader:
                 self.save_locally = False
 
     def load_news_sentiment(self, tickers: List[str]) -> Dict[str, dict]:
-        
         if not self.load_locally:
             feed = APIs.get_news_sentiment(self.api_key, tickers=tickers)
             
@@ -51,7 +50,6 @@ class FeedLoader:
         return feed
     
     def load_fundamentals(self, tickers: List[str]) -> Dict[str, dict]:
-        
         if not self.load_locally:
             feed = APIs.get_fundamentals(self.api_key, tickers=tickers)
             
@@ -71,7 +69,6 @@ class FeedLoader:
         return feed
     
     def load_insider_moves(self, tickers: List[str]) -> Dict[str, dict]:
-        
         if not self.load_locally:
             feed = APIs.get_insider_moves(self.api_key, tickers=tickers)
             
